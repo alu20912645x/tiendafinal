@@ -1,0 +1,21 @@
+<?php
+  session_start();
+  include("./include/funciones.php");
+  $connect = connect_db();
+
+  $title = "Plantas el Caminàs -> ";
+  include("./include/header.php");
+  require './include/ElCaminas/Carrito.php';
+  require './include/ElCaminas/Producto.php';
+  require './include/ElCaminas/Productos.php';
+  use ElCaminas\Producto;
+
+
+  $carrito = new Producto(7);
+  
+
+?>
+
+<?php
+include("./include/footer.php");
+?>
